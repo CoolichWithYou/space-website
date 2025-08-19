@@ -16,13 +16,11 @@
         <div class="section_title">
             Новости
         </div>
-        <div class="posts">
-            <div class="post">
-                <h2><?= htmlspecialchars($item['title']) ?></h2>
-                <p><?= htmlspecialchars($item['announce']) ?></p>
-                <p><?= htmlspecialchars($item['content']) ?></p>
-                <a href="/news/<?= $item['id'] ?>">Назад к новостям</a>
-            </div>
+        <div class="post">
+            <h2><?= $item['title'] ?></h2>
+            <p><?= $item['announce'] ?></p>
+            <p><?= $item['content'] ?></p>
+            <a href="/news/<?= $item['id'] ?>">Назад к новостям</a>
         </div>
     </div>
     <?php include 'templates/footer.php'; ?>

@@ -11,7 +11,8 @@ class NewsController
     public function list($page)
     {
         $news = News::paginate($page);
-//        $posts_count = ceil(News::countPosts() / 4);
+        $posts_count = ceil(News::countPosts() / 4);
+        $current_page = $page;
         require __DIR__ . '/../views/news.php';
     }
 

@@ -5,18 +5,22 @@ require_once __DIR__ . '/../db/get_connection.php';
 
 class News
 {
-//    public static function countPosts(){
-//        $conn = getConnection();
-//        $stmt = $conn->prepare("SELECT count(*) FROM news");
-//        $stmt->execute();
-//        return $stmt->get_result()->fetch_row();
-//    }
+    public static function countPosts()
+    {
+        $conn = getConnection();
+        $stmt = $conn->prepare("SELECT count(*) FROM news");
+        $stmt->execute();
+        $result = $stmt->get_result()->fetch_row();
+
+        return $result[0];
+    }
+
     public static function paginate($page)
     {
         $conn = getConnection();
         $offset = ($page - 1) * 4;
         $stmt = $conn->prepare("
-            SELECT id, date, title, announce 
+            SELECT id, date, image, title, announce 
             FROM news 
             ORDER BY date DESC 
             LIMIT 4 OFFSET ?

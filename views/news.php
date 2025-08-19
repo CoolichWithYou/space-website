@@ -8,47 +8,55 @@
 <body>
 <div class="container">
     <?php include 'templates/header.php'; ?>
-    <div class="slider">
-        <?php if (!empty($news)): ?>
-            <?php $first = $news[0]; ?>
+    <?php if (!empty($news)): ?>
+        <?php $first = $news[0]; ?>
+        <div class="slider" style="background-image: url('/images/<?= $first['image'] ?>')">
+
             <div class="post_slider">
                 <div class="post_title">
-                    <?= htmlspecialchars($first['title']) ?>
+                    <?= $first['title'] ?>
                 </div>
                 <div class="description">
-                    <?= htmlspecialchars($first['announce']) ?>
+                    <?= $first['announce'] ?>
                 </div>
             </div>
-        <?php endif; ?>
-    </div>
+        </div>
+    <?php endif; ?>
     <div class="news">
         <div class="section_title">
             Новости
         </div>
         <div class="posts">
-            <?php foreach($news as $item): ?>
+            <?php foreach ($news as $item): ?>
                 <div class="post">
-                    <h2><?= htmlspecialchars($item['title']) ?></h2>
-                    <p><?= htmlspecialchars($item['announce']) ?></p>
-                    <a href="/news/<?= $item['id'] ?>">Подробнее -></a>
+                    <div class="date"><?= date('d.m.Y', strtotime($item['date'])) ?></div>
+                    <h2><?= $item['title'] ?></h2>
+                    <p><?= $item['announce'] ?></p>
+                    <div class="info_container">
+                        <a class="more_info" href="/news/<?= $item['id'] ?>">Подробнее →</a>
+                    </div>
                 </div>
             <?php endforeach; ?>
         </div>
         <nav class="pagination">
-            <?php if ($page > 1): ?>
-                <a href="/?page=<?= $page - 1 ?>">Назад</a>
+            <?php if ($current_page > 1): ?>
+                <a href="/?page=1">←</a>
             <?php endif; ?>
 
-            <?php for ($i = 1; $i <= $posts_count; $i++): ?>
-                <?php if ($i == $posts_count): ?>
+            <?php
+            $start = max(1, $current_page - 2);
+            $end = min($posts_count, $current_page + 2);
+
+            for ($i = $start; $i <= $end; $i++): ?>
+                <?php if ($i == $current_page): ?>
                     <strong><?= $i ?></strong>
                 <?php else: ?>
                     <a href="/?page=<?= $i ?>"><?= $i ?></a>
                 <?php endif; ?>
             <?php endfor; ?>
 
-            <?php if ($posts_count < $page): ?>
-                <a href="/?page=<?= $posts_count + 1 ?>">Вперёд</a>
+            <?php if ($current_page < $posts_count): ?>
+                <a href="/?page=<?= $posts_count ?>">→</a>
             <?php endif; ?>
         </nav>
     </div>

@@ -23,7 +23,7 @@ html, body {
 
 .header {
     flex: 2;
-    margin-left: 5vw;
+    margin-left: 10%;
     margin-top: 2vw;
     margin-bottom: 2vw;
 }
@@ -37,12 +37,15 @@ html, body {
 }
 
 .date {
-    color: white;
-    background-color: gray;
+    color: #6C6E7B;
+    background-color: #ECF2F5;
     width: 7rem;
     border-radius: 2rem;
+    height: 2.5rem;
     display: flex;
     text-align: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .title {
@@ -60,7 +63,8 @@ html, body {
 }
 
 .post_title {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
 .post_slider {
@@ -74,19 +78,42 @@ html, body {
 }
 
 .post {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .news {
     flex: 12;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+.pagination {
+    display: flex;
+    justify-content: end;
 }
 
 .more_info {
-    background-color: purple;
-    color: white;
+    color: #841844;
     width: 8rem;
     height: 3rem;
+    border: 2px solid #841844;
     border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-self: end;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info_container {
+    display: flex;
+    margin-right: 10vw;
+}
+
+a {
+    text-decoration: none;
 }
 
 .general_content {
@@ -97,14 +124,14 @@ html, body {
 
 .posts {
     display: grid;
-    grid-template-columns: 30em 30em;
-    grid-template-rows: 15em 15em;
-    margin-left: 5vw;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 15em;
+    gap: 2vw;
     margin-top: 4vw;
+    max-width: 100%;
 }
 
 .section_title {
-    margin-left: 5vw;
     margin-top: 2vw;
     font-size: 2rem;
 }

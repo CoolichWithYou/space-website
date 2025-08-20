@@ -11,6 +11,7 @@
 :root {
     --font-header: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     --font-body: "Open Sans", Arial, sans-serif;
+    --main-color: #841844;
 }
 
 body {

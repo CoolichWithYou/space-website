@@ -12,8 +12,8 @@
     <div class="header_line"></div>
     <div class="news">
         <div class="path">
-            <div class="first">Главная</div>
-            <div class="first">/</div>
+            <a class="first" href="/">Главная</a>
+            <div>/</div>
             <div class="second"><?= $item['title'] ?></div>
         </div>
         <div class="post">
@@ -27,7 +27,7 @@
                     </div>
                     <div class="general_content">
                         <div class="main_info"><?= $item['announce'] ?></div>
-                        <div><?= $item['content'] ?></div>
+                        <div class="content"><?= $item['content'] ?></div>
                     </div>
                 </div>
 

@@ -28,9 +28,9 @@
         </div>
         <div class="posts">
             <?php foreach ($news as $item): ?>
-                <div class="post">
+                <div class="main_posts">
                     <div class="date"><?= date('d.m.Y', strtotime($item['date'])) ?></div>
-                    <h2><?= $item['title'] ?></h2>
+                    <div class="info"><?= $item['title'] ?></div>
                     <p><?= $item['announce'] ?></p>
                     <div class="info_container">
                         <a class="more_info" href="/news/<?= $item['id'] ?>">Подробнее →</a>
@@ -38,30 +38,30 @@
                 </div>
             <?php endforeach; ?>
         </div>
-        <nav class="pagination">
-            <div class="pages">
-                <?php if ($current_page > 1): ?>
-                    <a class="page_num" href="/?page=1">←</a>
-                <?php endif; ?>
-
-                <?php
-                $start = max(1, $current_page - 2);
-                $end = min($posts_count, $current_page + 2);
-
-                for ($i = $start; $i <= $end; $i++): ?>
-                    <?php if ($i == $current_page): ?>
-                        <div class="page_num"><?= $i ?></div>
-                    <?php else: ?>
-                        <a class="page_num" href="/?page=<?= $i ?>"><?= $i ?></a>
-                    <?php endif; ?>
-                <?php endfor; ?>
-
-                <?php if ($current_page < $posts_count): ?>
-                    <a class="page_num" href="/?page=<?= $posts_count ?>">→</a>
-                <?php endif; ?>
-            </div>
-        </nav>
     </div>
+    <nav class="pagination">
+        <div class="pages">
+            <?php if ($current_page > 1): ?>
+                <a class="goto" href="/?page=1">←</a>
+            <?php endif; ?>
+
+            <?php
+            $start = max(1, $current_page - 2);
+            $end = min($posts_count, $current_page + 2);
+
+            for ($i = $start; $i <= $end; $i++): ?>
+                <?php if ($i == $current_page): ?>
+                    <div class="current_page"><?= $i ?></div>
+                <?php else: ?>
+                    <a class="page_num" href="/?page=<?= $i ?>"><?= $i ?></a>
+                <?php endif; ?>
+            <?php endfor; ?>
+
+            <?php if ($current_page < $posts_count): ?>
+                <a class="goto" href="/?page=<?= $posts_count ?>">→</a>
+            <?php endif; ?>
+        </div>
+    </nav>
     <?php include 'templates/footer.php'; ?>
 </div>
 </body>

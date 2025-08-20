@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>METANIT.COM</title>
+    <title>Галактический вестник</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="stylesheet" href="/assets/news.css">
 </head>
 <body>
 <div class="container">
     <?php include 'templates/header.php'; ?>
     <?php if (!empty($news)): ?>
         <?php $first = $news[0]; ?>
-        <div class="slider" style="background-image: url('/images/<?= $first['image'] ?>')">
+        <div class="slider" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/<?= $first['image'] ?>')">
 
             <div class="post_slider">
                 <div class="post_title">

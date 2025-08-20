@@ -21,12 +21,14 @@
                 <div class="post_title"><?= $item['title'] ?></div>
                 <div class="date"><?= date('d.m.Y', strtotime($item['date'])) ?></div>
 
-                <div class="main_info"><?= $item['announce'] ?></div>
                 <div class="balanced">
                     <div class="image-wrapper">
                         <img class="image" src="/images/<?= $item['image'] ?>">
                     </div>
-                    <div class="general_content"><?= $item['content'] ?></div>
+                    <div class="general_content">
+                        <div class="main_info"><?= $item['announce'] ?></div>
+                        <div><?= $item['content'] ?></div>
+                    </div>
                 </div>
 
                 <a class="back_button" href="/">← НАЗАД К НОВОСТЯМ</a>

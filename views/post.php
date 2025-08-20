@@ -13,14 +13,12 @@
         <div class="second">Возвращение этнографа</div>
     </div>
     <div class="news">
-        <div class="section_title">
-            Новости
-        </div>
         <div class="post">
-            <h2><?= $item['title'] ?></h2>
-            <p><?= $item['announce'] ?></p>
-            <p><?= $item['content'] ?></p>
-            <a href="/news/<?= $item['id'] ?>">Назад к новостям</a>
+            <div class="date"><?= date('d.m.Y', strtotime($item['date'])) ?></div>
+            <div class="title"><?= $item['title'] ?></div>
+            <div class="main_info"><?= $item['announce'] ?></div>
+            <div class="general_content"><?= $item['content'] ?></div>
+            <a href="/">Назад к новостям</a>
         </div>
     </div>
     <?php include 'templates/footer.php'; ?>

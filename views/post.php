@@ -21,9 +21,9 @@
                 <div class="main_info"><?= $item['announce'] ?></div>
                 <div class="general_content"><?= $item['content'] ?></div>
             </div>
-            <div class="image"><img src=/images/<?= $item['image'] ?>></img></div>
+            <img class="image" src=/images/<?= $item['image'] ?>>
         </div>
-        <div class="back_button"><a href="/">← НАЗАД К НОВОСТЯМ</a></div>
+        <a  class="back_button" href="/">← НАЗАД К НОВОСТЯМ</a>
     </div>
     <?php include 'templates/footer.php'; ?>
 </div>

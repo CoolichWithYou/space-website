@@ -28,7 +28,8 @@ html, body {
 }
 
 .planet {
-    width: 40%;
+    color: black;
+    width: 10%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -48,7 +49,7 @@ html, body {
 }
 
 .title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .post_content {
@@ -56,6 +57,7 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    gap: 2rem;
 }
 
 .slider {
@@ -107,22 +109,39 @@ html, body {
     }
 }
 
+.page_num:hover {
+    border: 2px solid #841844;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #841844;
+    color: white;
+}
+
 .image {
     width: auto;
-    height: 30vw;
     display: flex;
     justify-content: center;
 }
 
+
 .news {
     margin-left: 10%;
     margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .pagination {
     display: flex;
     justify-content: end;
     gap: 1rem;
+    margin-top: 5%;
 }
 
 .pages {
@@ -144,10 +163,27 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition: all 1s ease;
 }
 
 .goto {
     color: #841844;
+    border: 2px solid #841844;
+    width: 5rem;
+    height: 3rem;
+    border-radius: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 1s ease;
+}
+
+.goto:hover {
+    color: white;
+    background-color: #841844;
     border: 2px solid #841844;
     width: 5rem;
     height: 3rem;
@@ -161,11 +197,26 @@ html, body {
 .header_line {
     width: auto;
     border: 1px solid;
-    border-color: grey;
+    border-color: #6C6E7B;
 }
 
 .back_button {
     color: #841844;
+    border: 2px solid #841844;
+    width: 15rem;
+    height: 3rem;
+    border-radius: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 1s ease;
+}
+
+.back_button:hover {
+    color: white;
+    background-color: #841844;
     border: 2px solid #841844;
     width: 15rem;
     height: 3rem;
@@ -191,12 +242,13 @@ html, body {
 
 .path {
     margin-left: 10%;
+    margin-top: 5%;
     display: flex;
 }
 
 .more_info {
     color: #841844;
-    width: 8rem;
+    width: 10rem;
     height: 3rem;
     border: 2px solid #841844;
     border-radius: 2rem;
@@ -224,14 +276,11 @@ a {
 }
 
 .info {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: 600;
 
     transition: color 1s ease;
 }
-
-
-
 
 .general_content {
     display: flex;
@@ -240,12 +289,13 @@ a {
     font-size: 1.2rem;
     line-height: 1.6rem;
     gap: 2.2vw;
+    flex: 5;
 }
 
 .posts {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 15em;
+    grid-auto-rows: 20em;
     gap: 2vw;
     margin-top: 4vw;
     max-width: 100%;
@@ -254,6 +304,11 @@ a {
 .section_title {
     margin-top: 2vw;
     font-size: 2rem;
+    font-weight: 600;
+}
+
+.second {
+    color: #6C6E7B;
 }
 
 .footer {
@@ -265,7 +320,7 @@ a {
     width: auto;
     margin-top: 106px;
     border: 1px solid;
-    border-color: grey;
+    border-color: #6C6E7B;
 }
 
 .copyright {

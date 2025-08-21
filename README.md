@@ -8,9 +8,12 @@
 
 ## 1. Описание
 
-Веб - сайт на php и MySQL выполненный с использованием ООП и MVC.
+Веб - сайт на php и MySQL, выполненный с использованием ООП и MVC
 
+### 2-я страница списка:
 <img style="display: flex; justify-content: center" src="screenshots/second_news_page.png" width="700"/>
+
+### страница новости с идентификатором 3:
 <img style="display: flex; justify-content: center" src="screenshots/third_post.png" width="700"/>
 
 ## 2. Переменные среды

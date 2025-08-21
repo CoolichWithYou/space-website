@@ -72,6 +72,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    line-height: 1.6rem;
 }
 
 .general_content {
@@ -96,6 +97,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 1rem;
 
     transition: all 1s ease;
 }

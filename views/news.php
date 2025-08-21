@@ -32,7 +32,7 @@
                 <div class="post">
                     <div class="date"><?= date('d.m.Y', strtotime($item['date'])) ?></div>
                     <div class="info"><?= $item['title'] ?></div>
-                    <p><?= $item['announce'] ?></p>
+                    <div class="announce"><?= $item['announce'] ?></div>
                     <div class="info_container">
                         <a class="more_info" href="/news/<?= $item['id'] ?>">Подробнее →</a>
                     </div>

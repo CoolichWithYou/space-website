@@ -59,7 +59,7 @@
             <?php endfor; ?>
 
             <?php if ($current_page < $posts_count): ?>
-                <a class="goto" href="/?page=<?= $posts_count ?>">→</a>
+                <a class="jump_to_page" href="/?page=<?= $posts_count ?>">→</a>
             <?php endif; ?>
         </div>
     </nav>

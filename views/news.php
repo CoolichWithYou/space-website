@@ -17,7 +17,7 @@
                 <div class="post_title">
                     <?= $first['title'] ?>
                 </div>
-                <div class="description">
+                <div class="post_description">
                     <?= $first['announce'] ?>
                 </div>
             </div>
@@ -29,7 +29,7 @@
         </div>
         <div class="posts">
             <?php foreach ($news as $item): ?>
-                <div class="main_posts">
+                <div class="post">
                     <div class="date"><?= date('d.m.Y', strtotime($item['date'])) ?></div>
                     <div class="info"><?= $item['title'] ?></div>
                     <p><?= $item['announce'] ?></p>
@@ -43,7 +43,7 @@
     <nav class="pagination">
         <div class="pages">
             <?php if ($current_page > 1): ?>
-                <a class="goto" href="/?page=1">←</a>
+                <a class="jump_to_page" href="/?page=1">←</a>
             <?php endif; ?>
 
             <?php

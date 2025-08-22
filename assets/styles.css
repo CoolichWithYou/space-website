@@ -90,3 +90,13 @@ html, body {
 .title {
     font-size: 1.2rem;
 }
+
+.arrow {
+    scale: 0.8;
+
+    transition: all 1s ease;
+}
+
+.left {
+    transform: rotate(180deg);
+}
